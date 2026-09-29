@@ -329,9 +329,34 @@ int main() {
 
 
 
+	const int size = 15;
+	int end_index = size - 1;
 
+	int arr[size]{};
 
-	
+	for (int i = 0; i < size; i++) {
+		arr[i] = (rand() % 6);
+	}
+
+	for (int i = 0; i <= end_index; i++) {
+		if (arr[i] == 0) {
+			int end_element = arr[end_index];
+			arr[end_index] = arr[i];
+			arr[i] = end_element;
+			end_index -= 1;
+			i--;
+		}
+	}
+
+	for (int i = 0; i < size; i++) {
+		std::cout << " " << arr[i];
+	}
+	for (int i = 0; i < size; i++) {
+
+		if (arr[i] == 0) arr[i] = -1;
+		
+		std::cout << " \n" << arr[i];
+	}
 
 	
 	return 0;
