@@ -24,7 +24,7 @@ int main() {
 
 	//if (name == "эдик") {
 	//	std::cout << "\nне ври";
-	//}
+	//} 
 	//else {
 	//	std::cout << "\nврешь";
 	//}
